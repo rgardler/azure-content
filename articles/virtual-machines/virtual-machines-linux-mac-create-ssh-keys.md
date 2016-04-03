@@ -170,18 +170,6 @@ Host github.private
   PubKeyAuthentication yes
   IdentityFile /Users/steve/.ssh/private_repo_github_id_rsa
 # ./Github Keys
-# Default Settings
-Host *
-  PubkeyAuthentication=no
-  IdentitiesOnly=yes
-  ServerAliveInterval=60
-  ServerAliveCountMax=30
-  ControlMaster auto
-  ControlPath /Users/steve/.ssh/Connections/ssh-%r@%h:%p
-  ControlPersist 4h
-  StrictHostKeyChecking=no
-  IdentityFile /Users/steve/.ssh/id_rsa
-  UseRoaming=no
 ```
 
 This SSH config gives you sections for each service to enable each to have its own dedicated key pair. The default settings are for any hosts that you are logged into that do not match any of the above groups. The SSH config also enables you to have two separate [GitHub](https://github.com) logins, one for public work and a second just for private repos that may be common at your work.
